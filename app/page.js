@@ -115,6 +115,61 @@ export default function Home() {
           </ul>
         </div>
 
+        {/* Register Instructions Section */}
+        <div
+          style={{
+            background: "rgba(255,255,255,0.03)",
+            borderRadius: 10,
+            padding: 20,
+            marginBottom: 20,
+            boxShadow: "0 0 12px rgba(168,85,247,0.15)",
+          }}
+        >
+          <h2
+            style={{
+              fontWeight: 700,
+              fontSize: 20,
+              marginBottom: 10,
+              color: "#a855f7",
+            }}
+          >
+            Register Instructions (Postman)
+          </h2>
+          <p style={{ marginBottom: 10, color: "#ccc", fontSize: 15 }}>
+            To create a new user, open{" "}
+            <b style={{ color: "#a855f7" }}>Postman</b> and send a
+            <b> POST</b> request:
+          </p>
+          <pre
+            style={{
+              background: "#111",
+              padding: "12px",
+              borderRadius: 8,
+              color: "#a855f7",
+              marginBottom: 12,
+              overflowX: "auto",
+            }}
+          >
+{`POST https://your-backend-url.com/auth/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "password123",
+  "role": "editor"
+}`}
+          </pre>
+          <p style={{ color: "#bbb", fontSize: 15 }}>
+            ✅ Fields required: <b>name</b>, <b>email</b>, <b>password</b>,{" "}
+            <b>role</b> (admin, editor, viewer).
+          </p>
+          <p style={{ color: "#bbb", fontSize: 15 }}>
+            ⚠️ If email already exists → you’ll get{" "}
+            <b style={{ color: "#f87171" }}>409 Conflict</b>.
+          </p>
+        </div>
+
         {/* Disclaimer Section */}
         <div
           style={{
